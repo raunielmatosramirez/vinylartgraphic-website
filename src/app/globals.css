@@ -1,0 +1,362 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap");
+@import "tailwindcss" layer(theme);
+
+* {
+  font-family: "Titillium Web", sans-serif;
+}
+
+.big-center {
+  font-weight: "Black 900";
+}
+.titulos_webs {
+  font-weight: "900";
+}
+
+/* :root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbarcuadradostyle {
+  color: #ffff00;
+}
+
+/* .shadow-neon {
+  background: #ffffff;
+  width: 300px;
+  height: 2px;
+  box-shadow: 0 0 7px 100px #ff1493, 0 0 7px 10px #ff1493;
+} */
+.imgemenostop {
+  margin-top: -80px;
+}
+
+/* Animaciones personalizadas */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-zoomIn {
+  animation: zoomIn 0.8s ease-out forwards;
+}
+
+.hidden-section {
+  opacity: 0;
+}
+.navCard:hover {
+  box-shadow: 0px -24px 30px 10px rgba(255, 255, 3, 0.8);
+}
+
+.navCardBottom:hover {
+  box-shadow: 0px 24px 30px 10px rgba(255, 255, 3, 0.8);
+}
+
+/* Asegurar que los enlaces internos no hereden efectos no deseados */
+.navCard a,
+.navCardBottom a {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+/* Estilos para los enlaces dentro de los cuadros (opcional) */
+.navCard .linkContainer a {
+  transition: all 0.2s ease-in-out;
+}
+
+.navCard .linkContainer a:hover {
+  text-decoration: underline;
+  transform: translateX(5px);
+}
+
+/* Contenedor de gusanitos de neón - detrás de los hexágonos */
+.neon-worms {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+  overflow: hidden; /* IMPORTANTE: evita que se salgan del contenedor */
+}
+
+.worm {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(15px);
+  opacity: 0;
+  animation: wormMove 12s linear infinite;
+}
+
+/* Ajusta las animaciones para que no se salgan de la pantalla */
+@keyframes wormMove {
+  0% {
+    transform: translate(10%, 10%) scale(0.8);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.7;
+    transform: translate(5%, 20%) scale(1);
+  }
+  10% {
+    opacity: 0.9;
+    transform: translate(15%, 80%) scale(1.1);
+  }
+  15% {
+    transform: translate(30%, 40%) scale(1);
+  }
+  20% {
+    transform: translate(45%, 60%) scale(0.9);
+  }
+  25% {
+    transform: translate(60%, 30%) scale(1);
+    opacity: 1;
+  }
+  30% {
+    transform: translate(75%, 50%) scale(1.2);
+  }
+  35% {
+    transform: translate(90%, 90%) scale(1);
+  }
+  40% {
+    transform: translate(80%, 20%) scale(0.8);
+  }
+  45% {
+    transform: translate(70%, 70%) scale(1);
+  }
+  50% {
+    transform: translate(60%, 40%) scale(1.1);
+    opacity: 1;
+  }
+  55% {
+    transform: translate(50%, 80%) scale(1);
+  }
+  60% {
+    transform: translate(40%, 30%) scale(0.9);
+  }
+  65% {
+    transform: translate(30%, 60%) scale(1);
+  }
+  70% {
+    transform: translate(20%, 40%) scale(1.2);
+  }
+  75% {
+    transform: translate(10%, 80%) scale(1);
+    opacity: 0.9;
+  }
+  80% {
+    transform: translate(25%, 50%) scale(0.8);
+  }
+  85% {
+    transform: translate(35%, 70%) scale(1);
+    opacity: 0.7;
+  }
+  90% {
+    transform: translate(45%, 30%) scale(1.1);
+    opacity: 0.5;
+  }
+  95% {
+    transform: translate(55%, 60%) scale(0.9);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(65%, 40%) scale(0.8);
+    opacity: 0;
+  }
+}
+
+/* Asegura que los worms no sean muy grandes */
+.worm-1 { background: #ff0080; width: 60px; height: 60px; animation-delay: 0s; }
+.worm-2 { background: #00ff88; width: 70px; height: 70px; animation-delay: 2s; }
+.worm-3 { background: #0088ff; width: 50px; height: 50px; animation-delay: 4s; }
+.worm-4 { background: #ffaa00; width: 65px; height: 65px; animation-delay: 6s; }
+.worm-5 { background: #aa00ff; width: 55px; height: 55px; animation-delay: 8s; }.worm-1 {
+  width: 120px;
+  height: 2450px;
+  background: #ff00ff;
+  box-shadow: 0 0 25px #ff00ff, 0 0 50px #ff00ff;
+  animation-delay: 0s;
+}
+
+.worm-2 {
+  width: 45px;
+  height: 1145px;
+  background: #ffff00;
+  box-shadow: 0 0 25px #ffff00, 0 0 50px #ffff00;
+  animation-delay: 2s;
+}
+
+.worm-3 {
+  width: 110px;
+  height: 2110px;
+  background: #00ffff;
+  box-shadow: 0 0 25px #00ffff, 0 0 50px #00ffff;
+  animation-delay: 4s;
+}
+
+.worm-4 {
+  width: 130px;
+  height: 130px;
+  background: #ff0080;
+  box-shadow: 0 0 25px #ff0080, 0 0 50px #ff0080;
+  animation-delay: 6s;
+}
+
+.worm-5 {
+  width: 80px;
+  height: 80px;
+  background: #00ff80;
+  box-shadow: 0 0 25px #00ff80, 0 0 50px #00ff80;
+  animation-delay: 8s;
+}
+
+
+
+/* Animaciones de los gusanitos */
+@keyframes wormMove {
+  0% {
+    transform: translate(100px, -50px) scale(0.8);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.7;
+    transform: translate(50px, 0px) scale(1);
+  }
+  10% {
+    opacity: 0.9;
+    transform: translate(150px, 480px) scale(1.1);
+  }
+  15% {
+    transform: translate(300px, 40px) scale(1);
+  }
+  20% {
+    transform: translate(450px, 180px) scale(0.9);
+  }
+  25% {
+    transform: translate(600px, 60px) scale(1);
+    opacity: 1;
+  }
+  30% {
+    transform: translate(750px, 180px) scale(1.2);
+  }
+  35% {
+    transform: translate(900px, 800px) scale(1);
+  }
+  40% {
+    transform: translate(1050px, 160px) scale(0.8);
+  }
+  45% {
+    transform: translate(1200px, 100px) scale(1);
+  }
+  50% {
+    transform: translate(1050px, 800px) scale(1.1);
+    opacity: 1;
+  }
+  55% {
+    transform: translate(900px, 140px) scale(1);
+  }
+  60% {
+    transform: translate(750px, 220px) scale(0.9);
+  }
+  65% {
+    transform: translate(600px, 160px) scale(1);
+  }
+  70% {
+    transform: translate(450px, 240px) scale(1.2);
+  }
+  75% {
+    transform: translate(300px, 780px) scale(1);
+    opacity: 0.9;
+  }
+  80% {
+    transform: translate(150px, 260px) scale(0.8);
+  }
+  85% {
+    transform: translate(50px, 200px) scale(1);
+    opacity: 0.7;
+  }
+  90% {
+    transform: translate(-50px, 480px) scale(1.1);
+    opacity: 0.5;
+  }
+  95% {
+    transform: translate(-100px, 220px) scale(0.9);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(-150px, -300px) scale(0.8);
+    opacity: 0;
+  }
+}
+
