@@ -10,6 +10,7 @@ import Image from "next/image";
 function LionModel(props) {
   const { nodes, materials } = useGLTF("/lion-web.gltf");
   const groupRef = useRef();
+  useGLTF.preload("/lion-web-.gltf");
 
   useFrame(() => {
     if (groupRef.current) {
@@ -732,10 +733,7 @@ function LionModel(props) {
   );
 }
 
-// Precargar el modelo
-useGLTF.preload("/lion-web.gltf");
 
-// Componente que controla la rotación del león
 function LionController({ isMouseInViewport, mousePosition }) {
   const lionRef = useRef();
   const rotationY = useRef(0);
@@ -746,12 +744,10 @@ function LionController({ isMouseInViewport, mousePosition }) {
   useFrame(() => {
     if (!lionRef.current) return;
 
-    // Detectar cuando el mouse sale del viewport
     if (!isMouseInViewport && lastMouseInViewport.current) {
       returnToCenter.current = true;
     }
 
-    // Detectar cuando el mouse entra al viewport
     if (isMouseInViewport && !lastMouseInViewport.current) {
       returnToCenter.current = false;
     }
@@ -768,7 +764,6 @@ function LionController({ isMouseInViewport, mousePosition }) {
         returnToCenter.current = false;
       }
     } else if (isMouseInViewport) {
-      // Calcular rotación basada en la posición del ratón en ambos ejes
       const normalizedX = (mousePosition.x / window.innerWidth) * 2 - 1;
       const normalizedY = 1 - (mousePosition.y / window.innerHeight) * 2;
 
@@ -788,36 +783,13 @@ function LionController({ isMouseInViewport, mousePosition }) {
   );
 }
 
-// Componente de Loading para el Canvas
-function CanvasLoading() {
-  return (
-    <div
-      style={{
-        position: "absolute",
-        top: "50%",
-        left: "50%",
-        transform: "translate(-50%, -50%)",
-        zIndex: 2,
-        color: "white",
-        textAlign: "center",
-      }}
-    >
-      <div>Cargando modelo 3D...</div>
-    </div>
-  );
-}
-
 export default function LionComponent() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isMouseInViewport, setIsMouseInViewport] = useState(true);
-  const [isMounted, setIsMounted] = useState(false);
   const [zoom, setZoom] = useState(9);
-  const [isModelLoaded, setIsModelLoaded] = useState(false);
-
   const updateZoom = () => {
     const screenWidth = window.innerWidth;
 
-    // Definir breakpoints
     const breakpoints = {
       tablet: 768, // Tablet
       laptop: 1024, // Laptop/PC pequeña
@@ -825,10 +797,8 @@ export default function LionComponent() {
     };
 
     if (screenWidth < breakpoints.laptop) {
-      // Por debajo de PC (tablet y móvil)
       setZoom(9);
     } else {
-      // Pantalla mayor a tablet (laptop y desktop)
       setZoom(11);
     }
   };
@@ -843,7 +813,6 @@ export default function LionComponent() {
   }, []);
 
   useEffect(() => {
-    setIsMounted(true);
 
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
@@ -866,23 +835,7 @@ export default function LionComponent() {
       window.removeEventListener("mouseenter", handleMouseEnter);
     };
   }, []);
-
-  if (!isMounted) {
-    return (
-      <div
-        style={{
-          width: "100vh",
-          height: "100%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <div>Cargando...</div>
-      </div>
-    );
-  }
-
+  
   return (
     <>
       <div
@@ -924,7 +877,7 @@ export default function LionComponent() {
           }}
         >
           <directionalLight position={[1, 1500, 1240]} intensity={10} />
-          <Suspense fallback={<CanvasLoading />}>
+          <Suspense fallback={null}>
             <LionController
               isMouseInViewport={isMouseInViewport}
               mousePosition={mousePosition}

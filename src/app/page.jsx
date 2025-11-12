@@ -10,7 +10,7 @@ import CustomizableProduct from "./Components/CustomizableProduct";
 import HeroPage from "./Components/HeroPage";
 import Image from "next/image";
 
-// Carga diferida para componentes pesados del main
+const LionComponentLazy = lazy(() => import("./Components/LionComponent"));
 const TestimonialsLazy = lazy(() => import("./Components/Testimonials"));
 const CarWrapBusinessLazy = lazy(() => import("./Components/CarWrapBusiness"));
 const WideFormatLazy = lazy(() => import("./Components/WideFormat"));
@@ -18,51 +18,23 @@ const CustomSignsMarkersLazy = lazy(() => import("./Components/CustomSignsMarker
 const CustomizableProductLazy = lazy(() => import("./Components/CustomizableProduct"));
 const HeroPageLazy = lazy(() => import("./Components/HeroPage"));
 
-// LionComponent normal (sin lazy) para máxima prioridad
-import LionComponent from "./Components/LionComponent";
-
-// Componente de precarga crítica
-function CriticalPreloader() {
-  useEffect(() => {
-    // Precargar recursos críticos de forma agresiva
-    const preloadImage = (src) => {
-      const img = new window.Image(); // Usar window.Image para el constructor nativo
-      img.src = src;
-    };
-
-    // Precargar imágenes críticas inmediatamente
-    preloadImage('/FONDO.svg');
-    preloadImage('/TRAMAEXAGONALPARAHOMEMOVIL.svg');
-    preloadImage('/lion-desenfoque.png');
-    preloadImage('/lion.png');
-    preloadImage('/HOMEGRAPHICDESIGN.svg');
-    preloadImage('/HOMEScrolltofindmore .svg');
-  }, []);
-
-  return null;
-}
-
-// Loading simple para componentes lazy
-const SimpleLoader = () => (
-  <div className="flex items-center justify-center h-64">
-    <div className="text-white">Cargando...</div>
+const FixedSectionLoader = () => (
+  <div className="absolute top-0 left-0 w-full h-screen bg-[#000000] flex items-center justify-center z-50">
+    <div className="text-white text-lg">Cargando experiencia...</div>
   </div>
 );
 
 export default function Home() {
   const { isAtTop } = useScroll();
   const pathname = usePathname();
-  const [isClient, setIsClient] = useState(false);
+  const [isFixedSectionReady, setIsFixedSectionReady] = useState(false);
 
   useEffect(() => {
-    setIsClient(true);
+    setIsFixedSectionReady(true);
   }, []);
 
   return (
     <>
-      <CriticalPreloader />
-      
-      {/* SECCIÓN FIJA - MÁXIMA PRIORIDAD - SE RENDERIZA PRIMERO */}
       <div
         className={`fixed top-0 left-0 w-full h-screen z-50 transition-all duration-500 ease-in-out ${
           isAtTop
@@ -70,7 +42,6 @@ export default function Home() {
             : "opacity-0 -translate-y-full pointer-events-none"
         }`}
       >
-        {/* Versión para PC - MÁXIMA PRIORIDAD */}
         <section
           className='hidden md:block w-full h-full'
           style={{
@@ -82,17 +53,19 @@ export default function Home() {
           }}
         >
           <div className='w-full h-full flex items-center justify-center'>
-            {/* LionComponent se carga inmediatamente - SIN LAZY */}
-            <LionComponent />
+            {/* {isFixedSectionReady ? (
+              <Suspense fallback={<FixedSectionLoader />}>
+              </Suspense>
+            ) : (
+              <FixedSectionLoader />
+            )} */}
+            <LionComponentLazy />
           </div>
         </section>
 
-        {/* Versión para Tablet/Mobile - MÁXIMA PRIORIDAD */}
         <section className='block md:hidden w-full h-screen relative overflow-hidden'>
-          {/* FONDO NEGRO INMEDIATO */}
           <div className='absolute inset-0 bg-[#000000] z-0' />
 
-          {/* Fondo SVG */}
           <div
             style={{
               background: "url('/TRAMAEXAGONALPARAHOMEMOVIL.svg')",
@@ -103,7 +76,6 @@ export default function Home() {
             className='absolute inset-0 z-20 h-[110%]'
           />
 
-          {/* Gusanitos - DEBAJO del SVG */}
           <div className='neon-worms absolute inset-0 z-10'>
             <div className='worm worm-1'></div>
             <div className='worm worm-2'></div>
@@ -112,7 +84,6 @@ export default function Home() {
             <div className='worm worm-5'></div>
           </div>
 
-          {/* Contenido - ENCIMA del SVG */}
           <div className='relative z-30 w-full h-full flex items-center justify-center'>
             <div
               style={{
@@ -153,16 +124,14 @@ export default function Home() {
         </section>
       </div>
 
-      {/* Imagen de fondo desenfocada */}
       <div className='fixed w-full flex items-center justify-center z-8 h-full'>
         {!isAtTop && (
           <div className="w-[600px] h-[700px] bg-[url('/lion-desenfoque.png')] bg-cover bg-center bg-no-repeat" />
         )}
       </div>
 
-      {/* MAIN - CONTENIDO SECUNDARIO CON CARGA DIFERIDA */}
       <main className='relative z-10 backdrop-blur-sm animate-fadeInUp'>
-        <Suspense fallback={<SimpleLoader />}>
+        <Suspense fallback={null}>
           <section
             id='hero-section'
             className='w-full flex flex-col items-center justify-center h-[fit-content] mb-[30px] relative overflow-x-hidden'

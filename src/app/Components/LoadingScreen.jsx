@@ -6,7 +6,7 @@ const LoadingScreen = () => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const duration = 10000;
+    const duration = 20000;
     const interval = 100;
     const steps = duration / interval;
     const increment = 100 / steps;
@@ -46,12 +46,11 @@ const LoadingScreen = () => {
         />
       </div>
 
-      {/* Texto de carga */}
       <div className='mt-4 text-center'>
         <p className='text-[#FFFF00] font-semibold text-lg mb-2'>
           {progress < 100 ? "Loading your experience..." : "¡Ready!"}
         </p>
-        <p className='text-gray-400 text-sm'>{Math.round(progress)}%</p>
+        <p className='text-gray-400 text-md'>{Math.round(progress)}%</p>
       </div>
     </div>
   );
