@@ -788,11 +788,31 @@ function LionController({ isMouseInViewport, mousePosition }) {
   );
 }
 
+// Componente de Loading para el Canvas
+function CanvasLoading() {
+  return (
+    <div
+      style={{
+        position: "absolute",
+        top: "50%",
+        left: "50%",
+        transform: "translate(-50%, -50%)",
+        zIndex: 2,
+        color: "white",
+        textAlign: "center",
+      }}
+    >
+      <div>Cargando modelo 3D...</div>
+    </div>
+  );
+}
+
 export default function LionComponent() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isMouseInViewport, setIsMouseInViewport] = useState(true);
   const [isMounted, setIsMounted] = useState(false);
   const [zoom, setZoom] = useState(9);
+  const [isModelLoaded, setIsModelLoaded] = useState(false);
 
   const updateZoom = () => {
     const screenWidth = window.innerWidth;
@@ -846,6 +866,7 @@ export default function LionComponent() {
       window.removeEventListener("mouseenter", handleMouseEnter);
     };
   }, []);
+
   if (!isMounted) {
     return (
       <div
@@ -903,7 +924,7 @@ export default function LionComponent() {
           }}
         >
           <directionalLight position={[1, 1500, 1240]} intensity={10} />
-          <Suspense fallback={null}>
+          <Suspense fallback={<CanvasLoading />}>
             <LionController
               isMouseInViewport={isMouseInViewport}
               mousePosition={mousePosition}

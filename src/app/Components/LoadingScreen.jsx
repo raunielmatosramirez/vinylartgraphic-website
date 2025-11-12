@@ -29,14 +29,12 @@ const LoadingScreen = () => {
       <div className='mb-8 flex items-center justify-center'>
         <div className='relative w-40 h-40 lg:w-56 lg:h-56 flex items-center justify-center'>
           <Image
-            src='/imagesdf-footer/VINYL ART- LOGO.svg'
+            src='/images-footer/VINYL ART- LOGO.svg'
             alt='Vinyl Art Logo'
             width={100}
             height={100}
             className='w-full h-full object-contain animate-pulse'
             priority
-             placeholder="blur"
-      blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
           />
         </div>
       </div>
