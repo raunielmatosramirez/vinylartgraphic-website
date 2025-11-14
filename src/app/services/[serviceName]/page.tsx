@@ -563,7 +563,7 @@ export default async function ServicesDetail({ params }: PageProps) {
       <section className='flex flex-col items-center justify-center text-center relative'>
         <HeaderSection
           title={currentService.service}
-          text='ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae debitis deleniti dignissimos.'
+          // text='ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae debitis deleniti dignissimos.'
         />
 
         {/* Fondo */}

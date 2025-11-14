@@ -10,7 +10,7 @@ import Image from "next/image";
 function LionModel(props) {
   const { nodes, materials } = useGLTF("/lion-web.gltf");
   const groupRef = useRef();
-  useGLTF.preload("/lion-web-.gltf");
+  useGLTF.preload("/lion-web.gltf");
 
   useFrame(() => {
     if (groupRef.current) {
@@ -733,7 +733,6 @@ function LionModel(props) {
   );
 }
 
-
 function LionController({ isMouseInViewport, mousePosition }) {
   const lionRef = useRef();
   const rotationY = useRef(0);
@@ -752,6 +751,7 @@ function LionController({ isMouseInViewport, mousePosition }) {
       returnToCenter.current = false;
     }
     lastMouseInViewport.current = isMouseInViewport;
+
     if (returnToCenter.current) {
       rotationY.current += (0 - rotationY.current) * 0.15;
       rotationX.current += (0 - rotationX.current) * 0.15;
@@ -763,37 +763,48 @@ function LionController({ isMouseInViewport, mousePosition }) {
         rotationX.current = 0;
         returnToCenter.current = false;
       }
-    } else if (isMouseInViewport) {
+    } else if (isMouseInViewport && mousePosition) {
       const normalizedX = (mousePosition.x / window.innerWidth) * 2 - 1;
       const normalizedY = 1 - (mousePosition.y / window.innerHeight) * 2;
 
       rotationY.current = normalizedX * Math.PI * 0.2;
       rotationX.current = normalizedY * Math.PI * -0.15;
     }
+
     lionRef.current.rotation.y = rotationY.current;
     lionRef.current.rotation.x = rotationX.current;
   });
-  return (
-    <LionModel
-      style={{ marginTop: "100px", zIndex: 3 }}
-      ref={lionRef}
-      scale={4}
-      position={[0, -40, 0, 0]}
-    />
-  );
+
+  return <LionModel ref={lionRef} scale={4} position={[0, -40, 0]} />;
 }
 
 export default function LionComponent() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isMouseInViewport, setIsMouseInViewport] = useState(true);
   const [zoom, setZoom] = useState(9);
+
+  // Usar throttling para optimizar el mousemove
+  const throttledSetMousePosition = useRef(null);
+
+  useEffect(() => {
+    let lastCall = 0;
+    const throttleDelay = 16; // ~60fps
+
+    throttledSetMousePosition.current = (position) => {
+      const now = Date.now();
+      if (now - lastCall < throttleDelay) return;
+
+      lastCall = now;
+      setMousePosition(position);
+    };
+  }, []);
+
   const updateZoom = () => {
     const screenWidth = window.innerWidth;
-
     const breakpoints = {
-      tablet: 768, // Tablet
-      laptop: 1024, // Laptop/PC pequeña
-      desktop: 1280, // Desktop
+      tablet: 768,
+      laptop: 1024,
+      desktop: 1280,
     };
 
     if (screenWidth < breakpoints.laptop) {
@@ -813,14 +824,17 @@ export default function LionComponent() {
   }, []);
 
   useEffect(() => {
-
     const handleMouseMove = (e) => {
-      setMousePosition({ x: e.clientX, y: e.clientY });
+      if (throttledSetMousePosition.current) {
+        throttledSetMousePosition.current({ x: e.clientX, y: e.clientY });
+      }
       setIsMouseInViewport(true);
     };
+
     const handleMouseLeave = () => {
       setIsMouseInViewport(false);
     };
+
     const handleMouseEnter = () => {
       setIsMouseInViewport(true);
     };
@@ -835,7 +849,7 @@ export default function LionComponent() {
       window.removeEventListener("mouseenter", handleMouseEnter);
     };
   }, []);
-  
+
   return (
     <>
       <div
@@ -895,7 +909,7 @@ export default function LionComponent() {
               className='max-w-full h-auto'
             />
           </div>
-          <div className='relative mt-4 w-full flex  bg-opacity-100 justify-center'>
+          <div className='relative mt-4 w-full flex bg-opacity-100 justify-center'>
             <Image
               src='./HOMEScrolltofindmore .svg'
               width={150}

@@ -9,6 +9,7 @@ import CustomSignsMarkers from "./Components/CustomSignsMarkers";
 import CustomizableProduct from "./Components/CustomizableProduct";
 import HeroPage from "./Components/HeroPage";
 import Image from "next/image";
+import LionComponent from "./Components/LionComponent";
 
 const LionComponentLazy = lazy(() => import("./Components/LionComponent"));
 const TestimonialsLazy = lazy(() => import("./Components/Testimonials"));
@@ -20,7 +21,7 @@ const HeroPageLazy = lazy(() => import("./Components/HeroPage"));
 
 const FixedSectionLoader = () => (
   <div className="absolute top-0 left-0 w-full h-screen bg-[#000000] flex items-center justify-center z-50">
-    <div className="text-white text-lg">Cargando experiencia...</div>
+    <div className="text-[#FFFF00] text-lg">...</div>
   </div>
 );
 
@@ -53,13 +54,13 @@ export default function Home() {
           }}
         >
           <div className='w-full h-full flex items-center justify-center'>
-            {/* {isFixedSectionReady ? (
+            {isFixedSectionReady ? (
               <Suspense fallback={<FixedSectionLoader />}>
+                <LionComponent />
               </Suspense>
             ) : (
               <FixedSectionLoader />
-            )} */}
-            <LionComponentLazy />
+            )}
           </div>
         </section>
 
@@ -131,45 +132,45 @@ export default function Home() {
       </div>
 
       <main className='relative z-10 backdrop-blur-sm animate-fadeInUp'>
-        <Suspense fallback={null}>
+        {/* <Suspense fallback={null}> */}
           <section
             id='hero-section'
             className='w-full flex flex-col items-center justify-center h-[fit-content] mb-[30px] relative overflow-x-hidden'
           >
-            <HeroPageLazy />
+            <HeroPage />
             <div className='w-[100%] max-w-4xl h-[1px] border-t-2 border-dashed border-[#FFFF00] mb-[65px]'></div>
           </section>
           <section
             id='customize-section'
             className='w-full flex flex-col items-center justify-center h-[fit-content] mb-[80px] relative overflow-x-hidden'
           >
-            <CustomizableProductLazy />
+            <CustomizableProduct />
           </section>
           <section
             id='car-section'
             className='w-full flex flex-col items-center justify-center h-[fit-content] mb-[80px] relative overflow-x-hidden'
           >
-            <CustomSignsMarkersLazy />
+            <CustomSignsMarkers />
           </section>
           <section
             id='wide'
             className='w-full flex flex-col items-center justify-center h-[fit-content] overflow-x-hidden mb-[80px]'
           >
-            <WideFormatLazy />
+            <WideFormat />
           </section>
           <section
             id='car-section'
             className='w-full flex flex-col items-center justify-center h-[fit-content] relative overflow-x-hidden'
           >
-            <CarWrapBusinessLazy />
+            <CarWrapBusiness />
           </section>
           <section
             id='testimonials'
             className='w-full flex flex-col items-center justify-center h-[fit-content]'
           >
-            <TestimonialsLazy />
+            <Testimonials />
           </section>
-        </Suspense>
+        {/* </Suspense> */}
       </main>
     </>
   );

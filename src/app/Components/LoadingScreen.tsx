@@ -1,29 +1,9 @@
+// src/app/Components/LoadingScreen.tsx
 "use client";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
-const LoadingScreen = () => {
-  const [progress, setProgress] = useState(0);
-
-  useEffect(() => {
-    const duration = 20000;
-    const interval = 100;
-    const steps = duration / interval;
-    const increment = 100 / steps;
-
-    const timer = setInterval(() => {
-      setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(timer);
-          return 100;
-        }
-        return prev + increment;
-      });
-    }, interval);
-
-    return () => clearInterval(timer);
-  }, []);
-
+const LoadingScreen = ({ progress }: { progress: number }) => {
   return (
     <div className='fixed inset-0 bg-[#151515] flex flex-col items-center justify-center z-[9999]'>
       <div className='mb-8 flex items-center justify-center'>

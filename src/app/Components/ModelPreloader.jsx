@@ -10,6 +10,7 @@ function ModelPreloader() {
   useEffect(() => {
     useGLTF.preload("/lion-web.gltf");
     <LionComponent />;
+    <AppInitializer/>
   }, []);
 
   return null;

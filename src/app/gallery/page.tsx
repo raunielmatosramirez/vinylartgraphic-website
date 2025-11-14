@@ -1,3 +1,4 @@
+import HeaderSection from "../Components/HeaderSection";
 import ImageGrid from "../Components/ImageGrid";
 import SEO from "../Components/SEO";
 
@@ -251,14 +252,16 @@ const Gallery: React.FC = () => {
       </div>
 
       {/* Header de la galería general */}
-      <div className='relative z-10 pt-8 pb-4 text-center'>
+      {/* <div className='relative z-10 pt-8 pb-4 text-center'>
         <h1 className='text-3xl font-bold mb-2'>Our Complete Portfolio</h1>
         <p className='text-lg max-w-2xl mx-auto'>
           Explore all our vinyl art projects and custom designs
         </p>
-      </div>
+      </div> */}
 
-      <ImageGrid images={sampleImages} />
+
+
+      <ImageGrid images={sampleImages} title="Our Complete Portfolio" description="Explore all our vinyl art projects and custom designs" />
     </section>
   );
 };

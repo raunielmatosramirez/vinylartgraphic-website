@@ -1,6 +1,6 @@
 // src/app/Components/AppInitializer.tsx
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Navbar from "./NavBar/NavBar";
 import WhatsAppButton from "./ContactWhatssap";
 import Footer from "./Footer";
@@ -19,58 +19,49 @@ interface Service {
   service: string;
   slug: string;
   subservices: Subservice[];
-  // Elimina image_url ya que no está en tus datos
 }
 
 interface AppInitializerProps {
   services: Service[];
   children: React.ReactNode;
 }
-
 export default function AppInitializer({
   services,
   children,
 }: AppInitializerProps) {
   const [isLoading, setIsLoading] = useState(true);
-// En AppInitializer.tsx, agrega:
-useEffect(() => {
-  // Precargar recursos críticos inmediatamente
-  const preloadCriticalAssets = async () => {
-    // Precargar el modelo 3D
-    const modelPreload = useGLTF.preload("/lion-web.gltf");
-    
-    // Precargar imágenes importantes
-    const imagePreloads = [
-      '/HOMEGRAPHICDESIGN.svg',
-      '/HOMEScrolltofindmore .svg',
-      '/FONDO.svg',
-      '/TRAMAEXAGONALPARAHOMEMOVIL.svg',
-      '/lion.png',
-      '/lion-desenfoque.png'
-    ].map(src => {
-      const img = new Image();
-      img.src = src;
-      return new Promise((resolve) => {
-        img.onload = resolve;
-        img.onerror = resolve; // Continúa aunque falle
-      });
-    });
+  const [loadingProgress, setLoadingProgress] = useState(0);
 
-    await Promise.all([modelPreload, ...imagePreloads]);
+  // Detectar tamaño de pantalla simple
+  const getLoadingDuration = () => {
+    const width = window.innerWidth;
+    if (width < 768) return 3000;     // Móvil: 3 segundos
+    if (width < 1024) return 5000;    // Tablet: 5 segundos
+    return 20000;                     // PC: 20 segundos
   };
 
-  preloadCriticalAssets();
-}, []);
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false);
-    }, 20000);
+    const duration = getLoadingDuration();
+    const interval = 50;
+    const steps = duration / interval;
+    const increment = 100 / steps;
 
-    return () => clearTimeout(timer);
+    let currentProgress = 0;
+    const timer = setInterval(() => {
+      currentProgress += increment;
+      setLoadingProgress(Math.min(currentProgress, 100));
+
+      if (currentProgress >= 100) {
+        clearInterval(timer);
+        setIsLoading(false);
+      }
+    }, interval);
+
+    return () => clearInterval(timer);
   }, []);
 
   if (isLoading) {
-    return <LoadingScreen />;
+    return <LoadingScreen progress={loadingProgress} />;
   }
 
   return (

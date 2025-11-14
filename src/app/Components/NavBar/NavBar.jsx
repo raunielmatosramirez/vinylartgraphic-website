@@ -15,7 +15,6 @@ const Navbar = ({ services }) => {
   const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Detectar si es móvil
   useEffect(() => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
@@ -88,8 +87,6 @@ const Navbar = ({ services }) => {
               >
                 HOME
               </Link>
-
-              {/* Services Dropdown */}
               <div
                 className='relative'
                 onMouseEnter={() => setIsServicesHovered(true)}
@@ -145,7 +142,7 @@ const Navbar = ({ services }) => {
                 CONTACT US
               </Link>
               <Link
-                href='/gallery-photos'
+                href='/gallery'
                 className='text-[#FFFF00] hover:text-white transition-colors duration-200 font-medium text-xs md:text-sm lg:text-base'
               >
                 GALLERY
@@ -180,13 +177,11 @@ const Navbar = ({ services }) => {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
       <div
         className={`md:hidden h-screen w-full fixed inset-0 z-40 transition-all duration-500 ease-in-out ${
           isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >
-        {/* Background Overlay */}
         <div
           className={`absolute h-full inset-0 w-full bg-black/90 transition-opacity duration-500 ${
             isMobileMenuOpen ? "opacity-100" : "opacity-0"
@@ -194,16 +189,13 @@ const Navbar = ({ services }) => {
           onClick={closeMobileMenu}
         />
 
-        {/* Sidebar - NUEVA ESTRUCTURA */}
         <div
           className={`absolute top-0 left-0 w-4/5 max-w-sm h-full bg-black/70 backdrop-blur-sm transform transition-transform duration-500 ease-in-out ${
             isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
           }`}
           onClick={(e) => e.stopPropagation()}
         >
-          {/* CONTENEDOR PRINCIPAL CON FLEX COLUMN */}
           <div className='flex flex-col h-[100vh]'>
-            {/* Header con Logo */}
             <div className='flex-shrink-0 flex items-center p-6 border-b border-gray-800'>
               <Link href='/' onClick={closeMobileMenu}>
                 <Image
@@ -251,8 +243,6 @@ const Navbar = ({ services }) => {
                         />
                       </svg>
                     </button>
-
-                    {/* Services Submenu */}
                     <div
                       className={`overflow-hidden transition-all duration-300 ${
                         isMobileServicesOpen
@@ -299,7 +289,7 @@ const Navbar = ({ services }) => {
 
                   <div className='border-t border-gray-800'>
                     <Link
-                      href='/gallery-photos'
+                      href='/gallery'
                       className='block text-[#FFFF00] hover:text-white text-md font-medium py-4 px-4 rounded-lg hover:bg-gray-900 transition-all duration-200'
                       onClick={closeMobileMenu}
                     >
@@ -309,14 +299,12 @@ const Navbar = ({ services }) => {
                 </div>
               </div>
             </div>
-
             {/* Footer Section - REDES SOCIALES RESPONSIVAS */}
             <div className='flex-shrink-0 p-6 border-t border-gray-800 bg-black/60'>
               <div className='flex flex-col items-center space-y-4'>
                 <h3 className='text-[#FFFF00] text-sm font-medium mb-2'>
                   Follow us on social media
                 </h3>
-
                 {/* Contenedor de iconos de redes sociales */}
                 <SocialNetworks closeMobileMenu={closeMobileMenu} />
               </div>
