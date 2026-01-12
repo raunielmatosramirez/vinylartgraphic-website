@@ -97,7 +97,8 @@ const ContactUs = () => {
     setErrors({});
     try {
       const sanitizedData = sanitizeData(formData);
-      const response = await fetch("/api/send-email", {
+      //ya no sirve el servicio de la carpeta api(pero no la borre)
+      const response = await fetch("https://vinylartgraphic.com/send-email.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
