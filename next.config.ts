@@ -2,9 +2,11 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   trailingSlash: true,
+   output: 'export',  // ← AÑADE ESTA LÍNEA
   images: {
     unoptimized: true,
   },
+  
   
   // Configuración webpack para excluir Resend del cliente
   webpack: (config, { isServer }) => {
