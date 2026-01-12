@@ -138,7 +138,7 @@ const CarWrapBusiness = () => {
           {!shouldLoadVideo ? (
             <div className="relative w-full h-full">
               <Image
-                src="/48.jpg"
+                src="/PRESENTACIONPARAVIDEO.png"
                 alt="Video preview"
                 fill
                 className="object-cover"

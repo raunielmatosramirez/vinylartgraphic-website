@@ -24,7 +24,7 @@ export async function POST(request) {
 
     const { data, error } = await resend.emails.send({
       from: "Vinylartgraphic Form <onboarding@resend.dev>",
-      to: ["raunielmatos@gmail.com"], // Cambia por tu email
+      to: ["info@vinylartgraphic.com"], // Cambia por tu email
       subject: `Contacto: ${subject}`,
       html: `
         <!DOCTYPE html>
