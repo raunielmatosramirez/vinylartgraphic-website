@@ -12,7 +12,12 @@ const ContactUs = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
+  const [messageType, setMessageType] = useState(""); // "success" | "error" | ""
   const [errors, setErrors] = useState({});
+
+  // Formspree configuration
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/xdaaovdy";
+  const FORMSPREE_SUCCESS_REDIRECT = "https://vinylartgraphic.com/thank-you"; // Opcional
 
   const validateForm = () => {
     const newErrors = {};
@@ -57,6 +62,7 @@ const ContactUs = () => {
 
     return newErrors;
   };
+
   const sanitizeData = (data) => {
     return {
       name: data.name.trim().replace(/<[^>]*>/g, ""), // Remove HTML tags
@@ -86,46 +92,97 @@ const ContactUs = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    
+    // Clear previous messages
+    setSubmitMessage("");
+    setMessageType("");
+    
     const formErrors = validateForm();
     if (Object.keys(formErrors).length > 0) {
       setErrors(formErrors);
-      setSubmitMessage("❌ Please correct the form errors");
+      setSubmitMessage("Please correct the form errors");
+      setMessageType("error");
       return;
     }
+    
     setIsSubmitting(true);
-    setSubmitMessage("");
     setErrors({});
+
     try {
       const sanitizedData = sanitizeData(formData);
-      //ya no sirve el servicio de la carpeta api(pero no la borre)
-      const response = await fetch("https://vinylartgraphic.com/send-email.php", {
+      
+      // Prepare FormData for Formspree (required format)
+      const formDataToSend = new FormData();
+      formDataToSend.append("name", sanitizedData.name);
+      formDataToSend.append("email", sanitizedData.email);
+      formDataToSend.append("subject", sanitizedData.subject);
+      formDataToSend.append("message", sanitizedData.message);
+      
+      // Optional: Add _replyto for better email routing
+      formDataToSend.append("_replyto", sanitizedData.email);
+      
+      // Optional: Add redirect URL
+      if (FORMSPREE_SUCCESS_REDIRECT) {
+        formDataToSend.append("_next", FORMSPREE_SUCCESS_REDIRECT);
+      }
+
+      // Send to Formspree
+      const response = await fetch(FORMSPREE_ENDPOINT, {
         method: "POST",
+        body: formDataToSend,
         headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(sanitizedData),
+          'Accept': 'application/json'
+        }
       });
+
       const result = await response.json();
-      if (response.ok) {
-        setSubmitMessage("✅ Message sent successfully!");
+
+      if (response.ok && result.ok) {
+        // Success
+        setSubmitMessage("Your message has been sent successfully! We'll get back to you soon.");
+        setMessageType("success");
+        
+        // Reset form
         setFormData({
           name: "",
           email: "",
           subject: "",
           message: "",
         });
+
+        // Optional: Auto-clear success message after 8 seconds
+        setTimeout(() => {
+          setSubmitMessage("");
+          setMessageType("");
+        }, 8000);
+
       } else {
-        setSubmitMessage(
-          `❌ Error: ${result.error || "Failed to send message"}`
-        );
+        // Formspree specific error
+        const errorMsg = result.error || "Failed to send message. Please try again.";
+        setSubmitMessage(`Error: ${errorMsg}`);
+        setMessageType("error");
       }
+
     } catch (error) {
-      setSubmitMessage("❌ Connection error. Please try again.");
-      console.error("Fetch error:", error);
+      // Network or other errors
+      console.error("Form submission error:", error);
+      setSubmitMessage("Network error. Please check your connection and try again.");
+      setMessageType("error");
     } finally {
       setIsSubmitting(false);
     }
   };
+
+  // Clear message after timeout
+  useEffect(() => {
+    if (submitMessage && messageType === "error") {
+      const timer = setTimeout(() => {
+        setSubmitMessage("");
+        setMessageType("");
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [submitMessage, messageType]);
 
   return (
     <>
@@ -261,8 +318,8 @@ const ContactUs = () => {
                 onChange={handleChange}
                 required
                 className={`w-full px-4 py-3 bg-transparent border-1 border-white text-white placeholder-gray-300 outline-none transition-colors focus:bg-white/10 ${
-                  errors.subject ? "border-red-500" : "border-white"
-                }`}
+                    errors.subject ? "border-red-500" : "border-white"
+                  }`}
               />
               {errors.subject && (
                 <p className='text-red-400 text-sm mt-1'>{errors.subject}</p>
@@ -277,8 +334,8 @@ const ContactUs = () => {
                 rows={6}
                 required
                 className={`w-full px-4 py-3 bg-transparent border-1 border-white text-white placeholder-gray-300 outline-none resize-vertical transition-colors focus:bg-white/10 ${
-                  errors.message ? "border-red-500" : "border-white"
-                }`}
+                    errors.message ? "border-red-500" : "border-white"
+                  }`}
               />
               {errors.message && (
                 <p className='text-red-400 text-sm mt-1'>{errors.message}</p>
@@ -287,23 +344,45 @@ const ContactUs = () => {
                 {formData.message.length}/1000
               </div>
             </div>
+            
+            {/* Status Message */}
             {submitMessage && (
               <div
-                className={`p-3 rounded ${
-                  submitMessage.includes("✅")
-                    ? "bg-green-500/20 text-green-300"
-                    : "bg-red-500/20 text-red-300"
+                className={`p-4 rounded-lg border ${
+                  messageType === "success"
+                    ? "bg-green-500/10 text-green-300 border-green-500/30"
+                    : "bg-red-500/10 text-red-300 border-red-500/30"
                 }`}
               >
-                {submitMessage}
+                <div className="flex items-start">
+                  <span className="mr-2 text-lg">
+                    {messageType === "success" ? "✅" : "⚠️"}
+                  </span>
+                  <span className="flex-1">{submitMessage}</span>
+                </div>
               </div>
             )}
+
             <button
               type='submit'
               disabled={isSubmitting}
-              className='w-[200px] py-1 bg-pink-500 text-white text-sm hover:bg-white hover:cursor-pointer hover:text-pink-500 transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed'
+              className={`w-[200px] py-3 text-white text-sm hover:cursor-pointer transition-all duration-300 shadow-lg hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed ${
+                isSubmitting 
+                  ? 'bg-pink-700' 
+                  : 'bg-pink-500 hover:bg-white hover:text-pink-500'
+              }`}
             >
-              {isSubmitting ? "SENDING..." : "SUBMIT QUESTION"}
+              {isSubmitting ? (
+                <span className="flex items-center justify-center">
+                  <svg className="animate-spin h-4 w-4 mr-2 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  SENDING...
+                </span>
+              ) : (
+                "SUBMIT QUESTION"
+              )}
             </button>
           </form>
         </div>
