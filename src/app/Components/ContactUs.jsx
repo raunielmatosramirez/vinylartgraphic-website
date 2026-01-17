@@ -16,7 +16,7 @@ const ContactUs = () => {
   const [errors, setErrors] = useState({});
 
   // Formspree configuration
-  const FORMSPREE_ENDPOINT = "https://formspree.io/f/xdaaovdy";
+  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mzddddlb";
   const FORMSPREE_SUCCESS_REDIRECT = "https://vinylartgraphic.com/thank-you"; // Opcional
 
   const validateForm = () => {

@@ -19,7 +19,6 @@ export const services = [
           "/imagesservices/CUSTOMSIGNSMAKERS/CHANNELLETTER/ImagendeWhatsApp2025-11-30alas09.04.12_ed1f753c.jpg",
           "/imagesservices/CUSTOMSIGNSMAKERS/CHANNELLETTER/ImagendeWhatsApp2025-11-30alas09.04.29_97f6f9a4.jpg",
           "/imagesservices/CUSTOMSIGNSMAKERS/CHANNELLETTER/ImagendeWhatsApp2025-11-30alas09.12.58_aed74613.jpg",
-          "/imagesservices/CUSTOMSIGNSMAKERS/CHANNELLETTER/ImagendeWhatsApp2025-12-07alas19.29.04_eadb6054.jpg",
           "/imagesservices/CUSTOMSIGNSMAKERS/CHANNELLETTER/ImagendeWhatsApp2025-12-07alas19.30.38_6c273f1d.jpg",
           "/imagesservices/CUSTOMSIGNSMAKERS/CHANNELLETTER/ImagendeWhatsApp2025-12-07alas19.36.54_d9483ea3.jpg",
           "/imagesservices/CUSTOMSIGNSMAKERS/CHANNELLETTER/ImagendeWhatsApp2025-12-07alas19.38.13_79834601.jpg",

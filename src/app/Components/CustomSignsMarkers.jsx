@@ -15,7 +15,7 @@ const CustomSignsMarkers = () => {
               </span>
             </h1>
             <h2 className='text-[#FFFF00] font-bold text-[35px] leading-tight mb-2'>
-              MARKERS
+              MAKERS
             </h2>
             <h3 className='text-pink-500 text-[16px] mb-2'>CHANNEL LETTER</h3>
           </div>
@@ -25,14 +25,14 @@ const CustomSignsMarkers = () => {
               width={600}
               height={400}
               src='/HOMESUSHI.png'
-              alt='Car Wrap Business'
+              alt='HOMESUSHI'
               className='object-cover w-full imgemenostop'
               priority
             />
           </div>
           <div className='h-full text-end'>
             <Link
-              href='/services/custom-signs-markers/'
+              href='/services/custom-signs-makers/'
               className='text-white text-[12px] md:text-[16px] underline hover:no-underline transition-all mb-[50px] mr-4 md:mt-[-150px] duration-300 inline-block underline-offset-3'
             >
               SEE MORE...  
