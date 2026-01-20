@@ -13,7 +13,7 @@ interface Subservice {
   benefits: string[];
   gallery: string[];
 }
-
+  
 interface Service {
   service: string;
   slug: string;

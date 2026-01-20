@@ -12,26 +12,6 @@
   font-weight: "900";
 }
 
-
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
 body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
@@ -41,12 +21,6 @@ body {
   color: #ffff00;
 }
 
-/* .shadow-neon {
-  background: #ffffff;
-  width: 300px;
-  height: 2px;
-  box-shadow: 0 0 7px 100px #ff1493, 0 0 7px 10px #ff1493;
-} */
 .imgemenostop {
   margin-top: -80px;
 }
@@ -238,15 +212,43 @@ body {
 }
 
 /* Asegura que los worms no sean muy grandes */
-.worm-1 { background: #ff0080; width: 60px; height: 60px; animation-delay: 0s; }
-.worm-2 { background: #00ff88; width: 70px; height: 70px; animation-delay: 2s; }
-.worm-3 { background: #0088ff; width: 50px; height: 50px; animation-delay: 4s; }
-.worm-4 { background: #ffaa00; width: 65px; height: 65px; animation-delay: 6s; }
-.worm-5 { background: #aa00ff; width: 55px; height: 55px; animation-delay: 8s; }.worm-1 {
+.worm-1 {
+  background: #ff0080;
+  width: 60px;
+  height: 60px;
+  animation-delay: 0s;
+}
+.worm-2 {
+  background: #00ff88;
+  width: 70px;
+  height: 70px;
+  animation-delay: 2s;
+}
+.worm-3 {
+  background: #0088ff;
+  width: 50px;
+  height: 50px;
+  animation-delay: 4s;
+}
+.worm-4 {
+  background: #ffaa00;
+  width: 65px;
+  height: 65px;
+  animation-delay: 6s;
+}
+.worm-5 {
+  background: #aa00ff;
+  width: 55px;
+  height: 55px;
+  animation-delay: 8s;
+}
+.worm-1 {
   width: 120px;
   height: 2450px;
   background: #ff00ff;
-  box-shadow: 0 0 25px #ff00ff, 0 0 50px #ff00ff;
+  box-shadow:
+    0 0 25px #ff00ff,
+    0 0 50px #ff00ff;
   animation-delay: 0s;
 }
 
@@ -254,7 +256,9 @@ body {
   width: 45px;
   height: 1145px;
   background: #ffff00;
-  box-shadow: 0 0 25px #ffff00, 0 0 50px #ffff00;
+  box-shadow:
+    0 0 25px #ffff00,
+    0 0 50px #ffff00;
   animation-delay: 2s;
 }
 
@@ -262,7 +266,9 @@ body {
   width: 110px;
   height: 2110px;
   background: #00ffff;
-  box-shadow: 0 0 25px #00ffff, 0 0 50px #00ffff;
+  box-shadow:
+    0 0 25px #00ffff,
+    0 0 50px #00ffff;
   animation-delay: 4s;
 }
 
@@ -270,7 +276,9 @@ body {
   width: 130px;
   height: 130px;
   background: #ff0080;
-  box-shadow: 0 0 25px #ff0080, 0 0 50px #ff0080;
+  box-shadow:
+    0 0 25px #ff0080,
+    0 0 50px #ff0080;
   animation-delay: 6s;
 }
 
@@ -278,11 +286,11 @@ body {
   width: 80px;
   height: 80px;
   background: #00ff80;
-  box-shadow: 0 0 25px #00ff80, 0 0 50px #00ff80;
+  box-shadow:
+    0 0 25px #00ff80,
+    0 0 50px #00ff80;
   animation-delay: 8s;
 }
-
-
 
 /* Animaciones de los gusanitos */
 @keyframes wormMove {
@@ -360,4 +368,3 @@ body {
     opacity: 0;
   }
 }
-

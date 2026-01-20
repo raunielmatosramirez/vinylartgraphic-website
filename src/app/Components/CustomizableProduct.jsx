@@ -30,7 +30,7 @@ const CustomizableProduct = () => {
             T-SHIRT
           </h1>
           <h3 className='text-pink-500 text-end text-[16px] mb-2'>
-            CUATOMIZABLE PRODUCTS
+            CUSTOMIZABLE PRODUCTS
           </h3>
           <Link
             href='/services/promotional-products/'

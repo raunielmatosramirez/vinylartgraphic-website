@@ -72,7 +72,7 @@ const Navbar = ({ services }) => {
           </div>
 
           <div
-            className={`hidden md:flex absolute left-1/2 transform -translate-x-1/2 transition-all duration-500 ${
+            className={`hidden lg:flex absolute left-1/2 transform -translate-x-1/2 transition-all duration-500 ${
               pathname === "/"
                 ? !isAtTop
                   ? "opacity-100 translate-y-0"
@@ -150,20 +150,9 @@ const Navbar = ({ services }) => {
             </div>
           </div>
 
-          {/* Right Container - Search & Hamburger */}
           <div className='flex items-center space-x-4'>
-            {/* <div className='flex items-center'>
-          <Image
-            src='/ICONOBUSCADOR.svg'
-            alt='Search'
-            width={50}
-            height={50}
-            className='w-8 h-8 lg:w-10 lg:h-10'
-          />
-        </div> */}
-
             <button
-              className={`md:hidden flex flex-col justify-center items-center w-8 h-8 transition-colors duration-300 ${
+              className={`lg:hidden flex flex-col justify-center items-center w-8 h-8 transition-colors duration-300 ${
                 isMobileMenuOpen ? "text-[#FFFF00]" : "text-[#FFFF00]"
               }`}
               onClick={toggleMobileMenu}
@@ -178,7 +167,7 @@ const Navbar = ({ services }) => {
       </div>
 
       <div
-        className={`md:hidden h-screen w-full fixed inset-0 z-40 transition-all duration-500 ease-in-out ${
+        className={`lg:hidden h-screen w-full fixed inset-0 z-40 transition-all duration-500 ease-in-out ${
           isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
       >

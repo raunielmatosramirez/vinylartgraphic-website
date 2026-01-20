@@ -8,10 +8,10 @@ const HeroPage = () => {
           <h1 className='text-[35px]  text-[#FFFF00] font-bold mt-[83px]  mb-[40px]'>
             VINYL ART DISIGN
           </h1>
-          <h1 className='text-[14px]  text-[#FFFF00] '>
+          <h1 className='text-[14px]  text-[#FFFF00]  '>
             From graphic design we work all kinds of vinyl and prints:
           </h1>
-          <h1 className='text-[14px] text-white mb-[45px]'>
+          <h1 className='text-[14px] text-white mb-[45px] '>
             Textiles, Signs, Decorations, Car Wrap and much more.
           </h1>
         </div>
