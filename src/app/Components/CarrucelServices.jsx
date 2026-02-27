@@ -19,9 +19,9 @@ const CarrucelServices = ({ currentService }) => {
     window.scrollTo(0, 0);
   }, [pathname]);
   return (
-    <div className='w-full'>
+    <div className='grid grid-cols-1 sm:grid-cols-2 mt-4 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4'>
       {/* Carrusel */}
-      <div className='relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 mt-8'>
+      {/* <div className='relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 mt-8'>
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           spaceBetween={15}
@@ -76,7 +76,7 @@ const CarrucelServices = ({ currentService }) => {
             },
           }}
           className='services-swiper'
-        >
+        > */}
           {currentService.subservices.map((subservice, index) => (
             <SwiperSlide key={index}>
               <div className='flex justify-center h-full px-1'>
@@ -93,8 +93,8 @@ const CarrucelServices = ({ currentService }) => {
               </div>
             </SwiperSlide>
           ))}
-        </Swiper>
-      </div>
+        {/* </Swiper>
+      </div> */}
 
       <style jsx global>{`
         .services-swiper {

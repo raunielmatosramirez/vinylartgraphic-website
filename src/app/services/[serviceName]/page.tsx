@@ -2,7 +2,7 @@ import Link from "next/link";
 import HeaderSection from "../../Components/HeaderSection";
 import CarrucelServices from "../../Components/CarrucelServices";
 import SEO from "@/app/Components/SEO";
-import { services } from '../../../utils/servicesData';
+import { services } from "../../../utils/servicesData";
 
 export async function generateStaticParams() {
   return services.map((service) => ({
@@ -18,7 +18,7 @@ export default async function ServicesDetail({ params }: PageProps) {
   const { serviceName } = await params;
 
   const currentService = services.find(
-    (service) => service.slug === serviceName
+    (service) => service.slug === serviceName,
   );
 
   if (!currentService) {
@@ -77,10 +77,7 @@ export default async function ServicesDetail({ params }: PageProps) {
       <SEO {...seoData} />
 
       <section className='flex flex-col items-center justify-center text-center relative'>
-        <HeaderSection
-          title={currentService.service}
-          text=''
-        />
+        <HeaderSection title={currentService.service} text='' />
 
         {/* Fondo */}
         <div className='fixed inset-0 flex items-center justify-center z-0'>

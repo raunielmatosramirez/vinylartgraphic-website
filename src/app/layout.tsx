@@ -42,7 +42,7 @@ export default function RootLayout({
     },
   };
   return (
-    <html title='Vinylart-Graphic-site' lang='en'>
+    <html lang='en'>
       <head>
         {/* Componente SEO global */}
         <SEO
@@ -54,6 +54,7 @@ export default function RootLayout({
         />
       </head>
       <body
+      suppressHydrationWarning
         style={{
           height: "100%",
           width: "100%",

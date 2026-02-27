@@ -6,7 +6,8 @@ export const services = [
       {
         name: "Channel Letter",
         image_url: "/imagesservices/CUSTOMSIGNSMAKERS/CHANNELLETTER/bla.jpg",
-        description: "",
+        description:
+          "Make your brand shine with custom 3D channel letter signs designed for maximum visibility and impact. Crafted from durable aluminum with energy-efficient LED illumination, our three-dimensional channel letters are available in front-lit, back-lit, or combination styles to suit your storefront or building. Perfect for businesses seeking a professional, eye-catching presence day or night, we offer custom fonts, sizes, and finishes tailored to your brand identity, all built to withstand the elements and deliver lasting performance. With 24/7 brand visibility, stand out during the day with sleek, dimensional lettering and at night with vibrant illumination.",
         benefits: [
           "24/7 Visibility: Bright LED illumination ensures your sign is visible day and night, increasing brand exposure around the clock.",
           "Energy Efficient: Modern LED technology provides brilliant lighting with minimal power consumption and long-lasting performance.",
@@ -34,13 +35,13 @@ export const services = [
           "/imagesservices/CUSTOMSIGNSMAKERS/CHANNELLETTER/IMG-20251201-WA0047.jpg",
           "/imagesservices/CUSTOMSIGNSMAKERS/CHANNELLETTER/IMG-20251201-WA0108.jpg",
           "/imagesservices/CUSTOMSIGNSMAKERS/CHANNELLETTER/CHANNEL.jpg",
-
         ],
       },
       {
         name: "Lightboxes",
         image_url: "/imagesservices/CUSTOMSIGNSMAKERS/LIGHTBOXES/1.jpg",
-        description: "",
+        description:
+          "We create sophisticated, high-visibility illuminated signage that makes your business literally shine, perfect for capturing attention day and night while projecting a modern and professional image. With maximum 24/7 visibility, an illuminated sign ensures your business is clearly seen during the day and stands out at night, increasing brand recognition. It projects confidence, stability, and quality to your potential customers, attracting more clients as the centerpiece of your outdoor marketing strategy that drives a steady flow of customers to your establishment. Plus, it's a long-lasting and efficient solution with LED technology offering superior brightness, minimal energy consumption, and a long lifespan, providing significant savings in the long run. ",
         benefits: [
           "High-Impact Display: Backlit graphics appear more vibrant and eye-catching than traditional signs, attracting more attention.",
           "Easy Graphic Updates: Swap out graphics quickly and easily to update promotions, messages, or seasonal campaigns.",
@@ -60,13 +61,13 @@ export const services = [
           "/imagesservices/CUSTOMSIGNSMAKERS/LIGHTBOXES/10.jpg",
           "/imagesservices/CUSTOMSIGNSMAKERS/LIGHTBOXES/11.jpg",
           "/imagesservices/CUSTOMSIGNSMAKERS/LIGHTBOXES/12.jpg",
-
         ],
       },
       {
         name: "Neon Signs",
         image_url: "/imagesservices/CUSTOMSIGNSMAKERS/NEONSIGNS/neon1.jpg",
-        description: "",
+        description:
+          "Capture the vibrant, nostalgic glow of traditional neon with the durability and versatility of modern LED technology. Our Neon Flex signs offer eye-catching illumination, customizable designs, and energy-efficient performance for any space. Create stunning visual impact by adding a retro-modern aesthetic that grabs attention and enhances ambiance. With versatile applications, they're perfect for storefronts, bars, restaurants, events, home decor, and creative branding. Plus, our customizable creativity brings any idea to life, from elegant script to bold graphics, with limitless design possibilities.",
         benefits: [
           "Retro Aesthetic: Classic neon look creates a unique and memorable brand identity that stands out from competitors.",
           "Custom Designs: Bend into virtually any shape, letter, or logo with a wide range of color options available.",
@@ -81,14 +82,14 @@ export const services = [
           "/imagesservices/CUSTOMSIGNSMAKERS/NEONSIGNS/neon5.jpg",
           "/imagesservices/CUSTOMSIGNSMAKERS/NEONSIGNS/neon6.jpg",
           "/imagesservices/CUSTOMSIGNSMAKERS/NEONSIGNS/neon7.jpg",
-
         ],
       },
       {
         name: "Non-Illuminated Signs",
         image_url:
           "/imagesservices/CUSTOMSIGNSMAKERS/NONILLUMINATEDSIGNS/1.jpg",
-        description: "",
+        description:
+          "Make a clear, professional statement with our custom non-illuminated signs, perfect for businesses, offices, and public spaces. These signs offer a clean, sophisticated look while effectively communicating your message. As a cost-effective solution, you get professional signage without the ongoing energy costs of illuminated options. With elegant simplicity, their clean, minimalist design enhances your space's aesthetic, while versatile application makes them ideal for indoor offices, retail spaces, and outdoor areas where illumination isn't required.",
         benefits: [
           "Budget-Friendly: High-quality signage at a lower cost than illuminated options, perfect for daytime businesses.",
           "Versatile Materials: Choose from acrylic, metal, wood, PVC, or vinyl to match your aesthetic and budget.",
@@ -110,13 +111,13 @@ export const services = [
           "/imagesservices/CUSTOMSIGNSMAKERS/NONILLUMINATEDSIGNS/12.jpg",
           "/imagesservices/CUSTOMSIGNSMAKERS/NONILLUMINATEDSIGNS/13.jpg",
           "/imagesservices/CUSTOMSIGNSMAKERS/NONILLUMINATEDSIGNS/14.jpg",
-
         ],
       },
       {
         name: "Indoor Signs",
         image_url: "/imagesservices/CUSTOMSIGNSMAKERS/INDOORSIGNS/1.jpg",
-        description: "",
+        description:
+          "We specialize in the design, fabrication, and installation of high-quality indoor signs that reinforce branding and improve communication within your space. From logos and office directories to safety signs, we create clear, professional signage that elevates your interior environment. With well-designed indoor signage, visitors and employees can navigate your space confidently and save time, while your brand identity remains visible and consistent throughout. A well-signed space appears more organized, welcoming, and trustworthy, enhancing overall professionalism.",
         benefits: [
           "Improved Navigation: Clear wayfinding signs help visitors easily find their way around your facility.",
           "Professional Environment: High-quality interior signage creates a polished, professional atmosphere.",
@@ -161,7 +162,8 @@ export const services = [
       {
         name: "Partial Car Wrap",
         image_url: "/imagesservices/CARWRAP/PARTIALCARWRAP/1.jpg",
-        description: "",
+        description:
+          "Transform any vehicle into a stunning, mobile billboard with our professional vehicle wrapping and graphics. Our high-quality car wraps offer a dynamic and cost-effective way to achieve a custom look, protect your paint, and deliver unmatched advertising reach on the move. A single wrapped car can generate thousands of daily impressions, turning every trip into a powerful marketing campaign at a fraction of traditional ad costs. Plus, build instant credibility as a professionally wrapped vehicle projects a successful, established, and trustworthy image for your business.",
         benefits: [
           "Cost-Effective Solution: Achieve significant visual impact at a lower investment than full wraps.",
           "Targeted Advertising: Focus graphics on the most visible areas of your vehicle for maximum exposure.",
@@ -201,13 +203,13 @@ export const services = [
           "/imagesservices/CARWRAP/PARTIALCARWRAP/30.jpg",
           "/imagesservices/CARWRAP/PARTIALCARWRAP/31.jpg",
           "/imagesservices/CARWRAP/PARTIALCARWRAP/32.jpg",
-
         ],
       },
       {
         name: "Full Car Wrap",
         image_url: "/imagesservices/CARWRAP/FULLCARWRAP/1.jpg",
-        description: "",
+        description:
+          "Transform any vehicle into a stunning, mobile billboard with our professional vehicle wrapping and graphics. Our high-quality car wraps offer a dynamic and cost-effective way to achieve a custom look, protect your paint, and deliver unmatched advertising reach on the move. A single wrapped car can generate thousands of daily impressions, turning every trip into a powerful marketing campaign at a fraction of traditional ad costs. Plus, build instant credibility as a professionally wrapped vehicle projects a successful, established, and trustworthy image for your business.",
         benefits: [
           "Maximum Advertising Space: 100% coverage creates a stunning, attention-grabbing mobile billboard.",
           "Complete Paint Protection: Full shield against UV rays, minor scratches, road debris, and environmental damage.",
@@ -242,7 +244,8 @@ export const services = [
       {
         name: "T-Shirts",
         image_url: "/imagesservices/PROMOTIONALPRODUCTS/T-SHIRTS/1.jpg",
-        description: "",
+        description:
+          "We transform your ideas into unique, high-impact t-shirts using state-of-the-art technology and premium materials, guaranteeing durable, sharp prints that perfectly reflect your style or brand identity. Ideal for branding and visibility, create t-shirts for your team, event, or marketing campaign and turn yourself into a walking billboard. With unlimited expression, they're perfect for work uniforms, personalized gifts, special events like weddings and birthdays, business merchandise, or simply expressing your creativity.",
         benefits: [
           "Mobile Advertising: Every wearer becomes a moving advertisement for your brand, reaching new audiences daily.",
           "Team Unity: Create matching shirts for employees to build team spirit and present a unified professional image.",
@@ -282,13 +285,13 @@ export const services = [
           "/imagesservices/PROMOTIONALPRODUCTS/T-SHIRTS/30.jpg",
           "/imagesservices/PROMOTIONALPRODUCTS/T-SHIRTS/31.jpg",
           "/imagesservices/PROMOTIONALPRODUCTS/T-SHIRTS/32.jpg",
-
         ],
       },
       {
         name: "Caps",
         image_url: "/imagesservices/PROMOTIONALPRODUCTS/CAPS/1.jpg",
-        description: "",
+        description:
+          "Top off your brand's look with custom-designed caps. We specialize in high-quality printing  to create head-turning cap that promotes your brand in style and comfort.",
         benefits: [
           "Head-Turning Branding: Caps place your logo at eye level, ensuring maximum visibility in crowds.",
           "Practical Promotion: Useful items that people actually want to wear, ensuring repeated brand exposure.",
@@ -309,7 +312,8 @@ export const services = [
       {
         name: "Key Chain",
         image_url: "/imagesservices/PROMOTIONALPRODUCTS/KEYCHAIN/1.jpg",
-        description: "",
+        description:
+          "Turn small items into powerful brand ambassadors. Our custom key chain printing delivers miniature, high-impact marketing tools that keep your brand in your customers' hands and on their minds, every single day.",
         benefits: [
           "Daily Exposure: Keychains are used multiple times daily, offering consistent brand visibility.",
           "High Retention Rate: Practical items that people keep for years, providing long-term advertising.",
@@ -324,13 +328,13 @@ export const services = [
           "/imagesservices/PROMOTIONALPRODUCTS/KEYCHAIN/5.jpg",
           "/imagesservices/PROMOTIONALPRODUCTS/KEYCHAIN/6.jpg",
           "/imagesservices/PROMOTIONALPRODUCTS/KEYCHAIN/7.jpg",
-
         ],
       },
       {
         name: "Roll-Up",
         image_url: "/imagesservices/PROMOTIONALPRODUCTS/ROLL-UP/1.jpg",
-        description: "",
+        description:
+          "Professional, portable, and powerful, our roll-up banners offer a sleek and easy way to display your brand at events, trade shows, and in-store promotions. Set up in seconds and make a lasting impression wherever you go. Designed to maximize portability, they're lightweight and easy to carry, perfect for events, presentations, and pop-up displays. With quick setup that requires no tools or technical skills, simply unfold, extend, and secure in seconds. Reusable and cost-effective, use them repeatedly for multiple events, saving time and resources while enhancing brand visibility with high-impact visuals that showcase logos, promotions, or key messages.",
         benefits: [
           "Quick Setup: Unfolds and sets up in minutes, perfect for busy events and last-minute presentations.",
           "Professional Appearance: Crisp graphics on taut fabric create a polished, professional display.",
@@ -345,13 +349,13 @@ export const services = [
           "/imagesservices/PROMOTIONALPRODUCTS/ROLL-UP/5.jpg",
           "/imagesservices/PROMOTIONALPRODUCTS/ROLL-UP/6.jpg",
           "/imagesservices/PROMOTIONALPRODUCTS/ROLL-UP/7.jpg",
-
         ],
       },
       {
         name: "Car Magnet",
         image_url: "/imagesservices/PROMOTIONALPRODUCTS/CARMAGNET/1.jpg",
-        description: "",
+        description:
+          "Turn any vehicle into a mobile billboard with our durable, high-quality outdoor car magnets. Perfect for temporary promotions, business identification, or personal expression, they're easy to apply, remove, and reuse without damaging your vehicle's paint. With mobile advertising that reaches thousands of potential customers wherever you drive, and effortless application that requires no tools or installation, just wipe clean and apply.",
         benefits: [
           "Easy Application: Simply place on clean vehicle surface - no tools or installation required.",
           "Removable & Reusable: Remove when not needed, reapply multiple times without damage to vehicle.",
@@ -372,7 +376,8 @@ export const services = [
       {
         name: "A-Frame",
         image_url: "/imagesservices/PROMOTIONALPRODUCTS/A-FRAME/1.jpg",
-        description: "",
+        description:
+          "Capture foot traffic and promote your daily offers with durable, weather-resistant A-frame sidewalk signs. Perfect for cafes, retail stores, and events, these portable signs turn passersby into customers by increasing walk-in traffic, attracting attention from both directions with eye-catching designs. Easily promote daily specials, events, or menus using interchangeable inserts or chalkboard surfaces for quick and effortless updates.",
         benefits: [
           "Foot Traffic Attention: Positioned at street level to catch the eye of pedestrians and passing drivers.",
           "Daily Updates: Easily change messages to promote daily specials, events, or seasonal offers.",
@@ -395,7 +400,8 @@ export const services = [
       {
         name: "Flags",
         image_url: "/imagesservices/PROMOTIONALPRODUCTS/FLAGS/1.jpg",
-        description: "",
+        description:
+          "Ideal for displaying your logo, events, or promotions, our high-quality flags are designed to grab attention and withstand the elements, helping your message rise above the rest. Perfect for businesses, trade shows, or outdoor events, they deliver high-visibility branding that draws attention from a distance. Versatile and portable, they're easy to set up, take down, and transport for any occasion, with fully customizable designs to showcase logos, slogans, or promotional messages in any size or style.",
         benefits: [
           "High Visibility: Moving flags naturally draw the eye, making them highly effective for attention capture.",
           "Location Marking: Clearly identify your business location from a distance to guide customers.",
@@ -406,7 +412,6 @@ export const services = [
           "/imagesservices/PROMOTIONALPRODUCTS/FLAGS/1.jpg",
           "/imagesservices/PROMOTIONALPRODUCTS/FLAGS/2.jpg",
           "/imagesservices/PROMOTIONALPRODUCTS/FLAGS/3.jpg",
-
         ],
       },
     ],
@@ -418,7 +423,8 @@ export const services = [
       {
         name: "Business Cards",
         image_url: "/imagesservices/MARKETINGMATERIALS/BUSINESSCARDS/1.jpg",
-        description: "",
+        description:
+          "Make a powerful first impression with premium business cards that reflect your brand's quality and professionalism. From sleek minimalist designs to bold creative statements, we deliver cards that get noticed and remembered.",
         benefits: [
           "Professional Introduction: High-quality cards establish immediate credibility and trust with new contacts.",
           "Brand Consistency: Cards that perfectly match your company's visual identity and messaging.",
@@ -440,7 +446,8 @@ export const services = [
       {
         name: "Postcards",
         image_url: "/imagesservices/MARKETINGMATERIALS/POSTCARDS/1.jpg",
-        description: "",
+        description:
+          "Stand out with custom-printed postcards perfect for promotions, events, or personal messages. Available in custom sizes and premium paper stocks, we offer full-color printing on both sides with professional finishes that leave a lasting impression. Ideal for direct mail campaigns or handouts, our quick turnaround and bulk pricing options make spreading the word easy and affordable.",
         benefits: [
           "Direct Engagement: Physical mail that customers hold and examine, creating stronger engagement than digital.",
           "Versatile Use: Announce openings, promote sales, share news, or simply stay top-of-mind with customers.",
@@ -458,7 +465,8 @@ export const services = [
         name: "Flyers and Brochures",
         image_url:
           "/imagesservices/MARKETINGMATERIALS/FLYERSANDBROCHURES/1.jpg",
-        description: "",
+        description:
+          "Capture attention and communicate your message effectively with professionally designed flyers and brochures. Whether for promotions, events, or informational purposes, we create print materials that inform, engage, and drive action.Stickers  Stickers  ",
         benefits: [
           "Detailed Information: Space to thoroughly explain products, services, events, or special offers.",
           "Multiple Distribution Methods: Hand out at events, include in mailings, or display in-store for pickup.",
@@ -469,13 +477,13 @@ export const services = [
           "/imagesservices/MARKETINGMATERIALS/FLYERSANDBROCHURES/1.jpg",
           "/imagesservices/MARKETINGMATERIALS/FLYERSANDBROCHURES/2.jpg",
           "/imagesservices/MARKETINGMATERIALS/FLYERSANDBROCHURES/4.jpg",
-
         ],
       },
       {
         name: "Stickers",
         image_url: "/imagesservices/MARKETINGMATERIALS/STICKERS/1.jpg",
-        description: "",
+        description:
+          "Make your mark with high-quality, versatile stickers and decals. Perfect for branding, promotions, product labeling, or personal expression, our durable stickers are designed to stick and stay wherever you need them.",
         benefits: [
           "Ubiquitous Branding: Place on products, packaging, laptops, vehicles, windows - virtually any surface.",
           "Customer Engagement: People love collecting and displaying interesting stickers, increasing brand interaction.",
@@ -494,13 +502,13 @@ export const services = [
           "/imagesservices/MARKETINGMATERIALS/STICKERS/9.jpg",
           "/imagesservices/MARKETINGMATERIALS/STICKERS/10.jpg",
           "/imagesservices/MARKETINGMATERIALS/STICKERS/11.jpg",
-
         ],
       },
       {
         name: "Invoice",
         image_url: "/imagesservices/MARKETINGMATERIALS/INVOICE/1.jpg",
-        description: "",
+        description:
+          "Streamline your paperwork with professional carbonless forms. Perfect for invoices, receipts, work orders, and contracts, these multi-part forms create instant copies without the mess of carbon paper, improving efficiency and organization.",
         benefits: [
           "Brand Reinforcement: Every transaction becomes another touchpoint reinforcing your professional image.",
           "Professional Appearance: Custom-designed invoices look more credible than generic templates.",
@@ -512,13 +520,13 @@ export const services = [
           "/imagesservices/MARKETINGMATERIALS/INVOICE/2.jpg",
           "/imagesservices/MARKETINGMATERIALS/INVOICE/3.jpg",
           "/imagesservices/MARKETINGMATERIALS/INVOICE/4.jpg",
-
         ],
       },
       {
         name: "Yard Signs",
         image_url: "/imagesservices/MARKETINGMATERIALS/YARDSIGNS/1.jpg",
-        description: "",
+        description:
+          "Make a local impact with durable, weather-resistant yard signs built to stand out and withstand the elements. Perfect for real estate listings, political campaigns, local advertising, realtor promotions, and event directions, our signs deliver hyper-local advertising that effectively targets neighborhoods, events, or high-traffic areas. Lightweight yet sturdy, they offer easy installation without tools or expertise, while their weather-resistant construction endures rain, wind, and sun without warping or fading.",
         benefits: [
           "Local Targeting: Perfect for reaching specific neighborhoods, communities, or event locations.",
           "High Visibility: Large format and strategic placement ensure messages are seen by passing traffic.",
@@ -530,7 +538,6 @@ export const services = [
           "/imagesservices/MARKETINGMATERIALS/YARDSIGNS/2.jpg",
           "/imagesservices/MARKETINGMATERIALS/YARDSIGNS/3.jpg",
           "/imagesservices/MARKETINGMATERIALS/YARDSIGNS/4.jpg",
-
         ],
       },
     ],
@@ -542,7 +549,8 @@ export const services = [
       {
         name: "ACRYLIC PRINTS",
         image_url: "/imagesservices/WIDEFORMATPRINTS/ACRYLICPRINTS/1.jpg",
-        description: "",
+        description:
+          "We create high-quality acrylic signs with sharp, long-lasting prints, using techniques like transparent vinyl or direct printing to achieve unique effects that convey professionalism and elegance in any indoor or outdoor space. Perfect for offices, storefronts, or public areas, these signs help you build a refined image that builds trust and highlights your visual identity, while offering maximum versatility for both interior and exterior applications.",
         benefits: [
           "Crystal Clear Appearance: Acrylic provides exceptional clarity and depth, making colors pop with brilliant intensity.",
           "Durable & Scratch Resistant: Withstands daily wear and tear while maintaining its pristine appearance.",
@@ -560,13 +568,13 @@ export const services = [
           "/imagesservices/WIDEFORMATPRINTS/ACRYLICPRINTS/7.jpg",
           "/imagesservices/WIDEFORMATPRINTS/ACRYLICPRINTS/8.jpg",
           "/imagesservices/WIDEFORMATPRINTS/ACRYLICPRINTS/9.jpg",
-
         ],
       },
       {
         name: "BANNERS, ALUMINUM AND COROPLAST",
         image_url: "/imagesservices/WIDEFORMATPRINTS/BANNERS/1.jpg",
-        description: "",
+        description:
+          "From eye-catching banners to durable aluminum and Coroplast signage, we offer versatile printing solutions for every need. Our custom banners are printed on premium vinyl, mesh, or fabric using fade-resistant inks, delivering vibrant, weather-resistant graphics ideal for trade shows, retail promotions, grand openings, and outdoor events—available in various sizes with hemmed edges, grommets, or pole pockets for easy installation. For lasting durability, our aluminum signs are crafted from high-grade metal with a protective coating, resisting rust, fading, and harsh weather; perfect for directional signage, building identification, informational plaques, and long-term outdoor branding in various finishes and mounting options. And for lightweight, temporary outdoor use, our Coroplast signs are made from weather-resistant corrugated plastic that holds up against wind, rain, and sun without warping or fading, ideal for real estate listings, political campaigns, yard signs, event messaging, and promotional displays. ",
         benefits: [
           "Highly Visible: Large format ensures maximum visibility for promotions, events, and advertising.",
           "Weather Resistant: Outdoor banners withstand sun, rain, and wind while maintaining color integrity.",
@@ -589,13 +597,13 @@ export const services = [
           "/imagesservices/WIDEFORMATPRINTS/BANNERS/12.jpg",
           "/imagesservices/WIDEFORMATPRINTS/BANNERS/13.jpg",
           "/imagesservices/WIDEFORMATPRINTS/BANNERS/14.jpg",
-
         ],
       },
       {
         name: "CANVAS PRINTS",
         image_url: "/imagesservices/WIDEFORMATPRINTS/CANVASPRINTS/1.jpg",
-        description: "",
+        description:
+          "Turn your favorite photos and artwork into stunning canvas prints that add warmth and personality to any space. Printed on high-quality, gallery-wrapped canvas with fade-resistant inks, our prints offer a textured, gallery-ready finish. Available in various sizes with optional framing or floating mounts, they are perfect for home decor, office accents, or special gifts. Durable, lightweight, and ready to hang, bring your memories to life.",
         benefits: [
           "Artistic Appeal: Canvas texture adds an artistic, gallery-quality look to any image or design.",
           "Ready to Hang: Comes stretched on frames for immediate display without additional framing needs.",
@@ -613,7 +621,8 @@ export const services = [
       {
         name: "FLOOR DECALS",
         image_url: "/imagesservices/WIDEFORMATPRINTS/FLOORDECALS/1.jpg",
-        description: "",
+        description:
+          "Turn your floors into eye-catching advertising space with durable, slip-resistant floor decals. Printed on heavy-duty, anti-slip vinyl with a protective laminate, our decals withstand heavy foot traffic and maintain vibrant colors. Perfect for retail promotions, directional signage, event marketing, or brand reinforcement, they apply easily to most smooth surfaces and remove cleanly. Make every step count with custom floor graphics that engage customers from the ground up.",
         benefits: [
           "High Traffic Durability: Specialized materials withstand foot traffic, carts, and cleaning.",
           "Slip Resistant Surface: Safety-focused finishes prevent slips and falls in busy areas.",
@@ -630,7 +639,8 @@ export const services = [
         name: "MONUMENT AND PYLON SIGNS",
         image_url:
           "/imagesservices/WIDEFORMATPRINTS/MONUMENTANDPYLONSIGNS/1.jpg",
-        description: "",
+        description:
+          "Make a lasting statement with custom monument and pylon signs designed to establish your brand presence and maximize visibility. Constructed from durable materials like masonry, aluminum, and architectural composites, these ground-level or elevated structures are built to withstand the elements. Available with integrated LED illumination for 24/7 impact, they are perfect for businesses, shopping centers, and developments seeking a professional, landmark identity. Customizable sizes, finishes, and lighting options ensure your signage stands out and endures.",
         benefits: [
           "Premium Brand Presence: Makes a strong statement about your business quality and permanence.",
           "Excellent Visibility: Tall structures ensure visibility from roads and surrounding areas.",
@@ -648,7 +658,8 @@ export const services = [
       {
         name: "PVC PRINTS",
         image_url: "/imagesservices/WIDEFORMATPRINTS/PVCPRINTS/1.jpg",
-        description: "",
+        description:
+          "Create durable, high-impact signage with custom PVC prints ideal for indoor and outdoor use. Printed on rigid, lightweight PVC board with vibrant, fade-resistant colors, our prints offer a professional, long-lasting solution for any application. Perfect for signage, displays, point-of-purchase materials, exhibitions, and more. Available in various thicknesses and sizes, with options for mounting or framing, designed to withstand the elements while maintaining a crisp, clean appearance.",
         benefits: [
           "Weather Resistant: Performs well in both indoor and outdoor environments.",
           "Lightweight & Rigid: Easy to handle and install while maintaining structural integrity.",
@@ -664,13 +675,13 @@ export const services = [
           "/imagesservices/WIDEFORMATPRINTS/PVCPRINTS/5.jpg",
           "/imagesservices/WIDEFORMATPRINTS/PVCPRINTS/6.jpg",
           "/imagesservices/WIDEFORMATPRINTS/PVCPRINTS/7.jpg",
-
         ],
       },
       {
         name: "WALL DECALS",
         image_url: "/imagesservices/WIDEFORMATPRINTS/WALLDECALS/1.jpg",
-        description: "",
+        description:
+          "Transform any blank wall into a captivating visual experience with custom wall decals. Printed on premium, removable vinyl, our decals apply smoothly to most surfaces and remove cleanly without damage, perfect for offices, retail spaces, or home decor. Available in various sizes, finishes, and custom shapes, they're ideal for branding, inspirational quotes, decorative accents, or feature walls. Lightweight, easy to install, and designed to make your space uniquely yours.",
         benefits: [
           "Transform Spaces: Completely change the look of walls without paint or permanent changes.",
           "Easy Application: Professional installation with precision alignment and bubble-free results.",
@@ -691,7 +702,8 @@ export const services = [
       {
         name: "VINYL",
         image_url: "/imagesservices/WIDEFORMATPRINTS/VINYL/1.jpg",
-        description: "",
+        description:
+          "Bring your ideas to life with vibrant, durable vinyl prints suitable for any surface or application. Using high-quality adhesive vinyl and fade-resistant inks, our prints deliver crisp graphics, bold colors, and long-lasting performance indoors or out. Perfect for decals, signage, vehicle graphics, window displays, banners, and custom projects. Available in matte, gloss, transparent, or textured finishes, with precision cutting for any shape or size. Versatile, affordable, and built to impress.",
         benefits: [
           "Daylight Visibility: Transparent designs allow light in while displaying messages to outside viewers.",
           "Increased Privacy: Frosted or patterned decals provide privacy while maintaining natural light.",
@@ -704,13 +716,13 @@ export const services = [
           "/imagesservices/WIDEFORMATPRINTS/VINYL/2.jpg",
           "/imagesservices/WIDEFORMATPRINTS/VINYL/3.jpg",
           "/imagesservices/WIDEFORMATPRINTS/VINYL/4.jpg",
-        
         ],
       },
-       {
+      {
         name: "WINDOW DECALS",
         image_url: "/imagesservices/WIDEFORMATPRINTS/WINDOWDECALS/1.jpg",
-        description: "",
+        description:
+          "Transform your windows into powerful marketing tools with custom window decals that grab attention and communicate your message. Printed on high-quality, weather-resistant vinyl, our decals are available in transparent, opaque, micro-perforate adhesive vinyl for one-way vision effects, or frosted vinyl films for added privacy and elegance. Perfect for offices, storefront promotions, branding, privacy, or decorative accents, they apply easily and remove without residue. Durable, vibrant, and designed to make your business stand out, day or night.",
         benefits: [
           "Daylight Visibility: Transparent designs allow light in while displaying messages to outside viewers.",
           "Increased Privacy: Frosted or patterned decals provide privacy while maintaining natural light.",
@@ -725,7 +737,7 @@ export const services = [
           "/imagesservices/WIDEFORMATPRINTS/WINDOWDECALS/4.jpg",
           "/imagesservices/WIDEFORMATPRINTS/WINDOWDECALS/5.jpg",
           "/imagesservices/WIDEFORMATPRINTS/WINDOWDECALS/6.jpg",
-          "/imagesservices/WIDEFORMATPRINTS/WINDOWDECALS/7.1.jpg",  
+          "/imagesservices/WIDEFORMATPRINTS/WINDOWDECALS/7.1.jpg",
           "/imagesservices/WIDEFORMATPRINTS/WINDOWDECALS/7.jpg",
           "/imagesservices/WIDEFORMATPRINTS/WINDOWDECALS/8.jpg",
           "/imagesservices/WIDEFORMATPRINTS/WINDOWDECALS/9.jpg",

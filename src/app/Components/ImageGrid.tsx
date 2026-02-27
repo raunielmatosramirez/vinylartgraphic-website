@@ -138,7 +138,7 @@ const ImageGrid: React.FC<ImageGridProps> = ({
   return (
     <section className='flex flex-col items-center justify-center text-center'>
       <HeaderSection title={title} text={description} />
-      {pathname === "/gallery-service/business-cards/" ? (
+      {/* {pathname === "/gallery-service/business-cards/" ? (
         <BusinessCardsPricingExactImage />
       ) : null}
       {pathname === "/gallery-service/postcards/" ? (
@@ -161,9 +161,9 @@ const ImageGrid: React.FC<ImageGridProps> = ({
       ) : null}
       {pathname === "/gallery-service/car-magnet/" ? (
         <MagneticsPricing />
-      ) : null}
+      ) : null} */}
 
-      <div style={{ padding: "20px", width: "100%" }}>
+      <div style={{ padding: "20px",paddingTop:"0px", width: "100%" }}>
         {/* Separador amarillo */}
         {pathname == "/gallery/" ? (
           <div className='relative w-full max-w-[1100px] mx-auto mb-6'>
@@ -189,8 +189,8 @@ const ImageGrid: React.FC<ImageGridProps> = ({
                 overflow: "hidden",
                 boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
                 cursor: "pointer",
-                height: isMobile ? "120px" : "200px",
-                gridColumn: `span ${anchos[index]}`,
+                height: isMobile ? "150px" : "250px", // Aumentado de 120/200 a 150/250
+                gridColumn: `span ${anchos[index] === 1 ? 1 : 2}`, // Las anchas ocupan 2 columnas
               }}
               onClick={() => openModal(image)}
               className='hover:shadow-lg transition-shadow duration-300'
@@ -231,8 +231,8 @@ const ImageGrid: React.FC<ImageGridProps> = ({
                 </h1>
               ) : null}
               <Image
-                width={anchos[index] === 1 ? 200 : 400}
-                height={isMobile ? 120 : 200}
+                width={anchos[index] === 1 ? 250 : 500} // Aumentado de 200/400 a 250/500
+                height={isMobile ? 150 : 250} // Aumentado de 120/200 a 150/250
                 src={image.src}
                 alt={image.alt}
                 priority={index < 4}
