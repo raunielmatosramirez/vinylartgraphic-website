@@ -286,23 +286,32 @@ const ContactUs = () => {
             </p>
           </a>
 
-          {/* Email */}
-          <a
-            href='mailto:info@vinylartgraphic.com'
-            className='flex items-center justify-center gap-2 p-2 md:col-span-2 '
-          >
-            <Image
-              src='/EMAILICON.svg'
-              alt='Icono email'
-              width={20}
-              height={20}
-              className='w-8 h-8'
-            />
-            <p className='text-white text-[16px] lg:text-[16px]'>
-              info@vinylartgraphic.com
-            </p>
-          </a>
-
+        {/* Email */}
+<a
+  href='mailto:info@vinylartgraphic.com'
+  onClick={(e) => {
+    // Detectar si es desktop
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      e.preventDefault();
+      // Opción A: Mostrar mensaje
+      alert('Email: info@vinylartgraphic.com\n\nYour default email client will open.');
+      // Opción B: Abrir en Gmail web (opcional)
+      window.open('https://mail.google.com/mail/?view=cm&fs=1&to=info@vinylartgraphic.com', '_blank');
+    }
+  }}
+  className='flex items-center justify-center gap-2 p-2 md:col-span-2'
+>
+  <Image
+    src='/EMAILICON.svg'
+    alt='Icono email'
+    width={20}
+    height={20}
+    className='w-8 h-8 group-hover:scale-110 transition-transform'
+  />
+  <p className='text-white text-[16px] lg:text-[16px]'>
+    info@vinylartgraphic.com
+  </p>
+</a>
           {/* Dirección - Abre en Google Maps */}
           <a
             href='https://www.google.com/maps/search/?api=1&query=4910+E+4th+Ave+Hialeah+FL+33013'

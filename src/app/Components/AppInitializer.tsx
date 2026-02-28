@@ -87,7 +87,7 @@ export default function AppInitializer({
   return (
     <>
       <Navbar services={services} />
-      <main className="min-h-screen">{children}</main>
+      <main className="min-h-fit">{children}</main>
       <WhatsAppButton />
       <section
         id='footer'

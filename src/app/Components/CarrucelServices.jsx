@@ -78,7 +78,7 @@ const CarrucelServices = ({ currentService }) => {
           className='services-swiper'
         > */}
           {currentService.subservices.map((subservice, index) => (
-            <SwiperSlide key={index}>
+            // <SwiperSlide key={index}>
               <div className='flex justify-center h-full px-1'>
                 <Link
                   key={subservice.name}
@@ -91,7 +91,7 @@ const CarrucelServices = ({ currentService }) => {
                   />
                 </Link>
               </div>
-            </SwiperSlide>
+            // </SwiperSlide>
           ))}
         {/* </Swiper>
       </div> */}
