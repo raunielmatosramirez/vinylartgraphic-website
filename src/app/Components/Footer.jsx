@@ -46,108 +46,117 @@ const Footer = () => {
           <h2 className='text-[#FFFF00] text-[14px] bold'>CONTACT INFO</h2>
           <div className='flex items-center gap-2 mb-1'>
             <a
-            href='tel:+17865327005'
-            className='flex gap-2 '
-            onClick={(e) => {
-              if (
-                !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-                  navigator.userAgent,
-                )
-              ) {
-                e.preventDefault();
-                alert("Please call from your phone to (786) 532-7005");
-              }
-            }}
-          >
-            <Image
-              src='/CELLICON.svg'
-              alt='Icono 1'
-              width={16}
-              height={16}
-              className='w-4 h-4'
-            />
-            <div className='block md:flex'>
-              <p className='text-white text-[12px] mr-1.5 lg:text-[12px]'>
-                (786) 532-7005
-              </p>
-            </div>
+              href='tel:+17865327005'
+              className='flex gap-2 '
+              onClick={(e) => {
+                if (
+                  !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                    navigator.userAgent,
+                  )
+                ) {
+                  e.preventDefault();
+                  alert("Please call from your phone to (786) 532-7005");
+                }
+              }}
+            >
+              <Image
+                src='/CELLICON.svg'
+                alt='Icono 1'
+                width={16}
+                height={16}
+                className='w-4 h-4'
+              />
+              <div className='block md:flex'>
+                <p className='text-white text-[12px] mr-1.5 lg:text-[12px]'>
+                  (786) 532-7005
+                </p>
+              </div>
             </a>
           </div>
           <div className='flex items-center gap-2 mb-1'>
             <a
-            href='tel:+13059607677'
-            className='flex gap-2 '
-            onClick={(e) => {
-              if (
-                !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-                  navigator.userAgent,
-                )
-              ) {
-                e.preventDefault();
-                alert("Please call from your phone to (305) 960-7677");
-              }
-            }}
-          >
-            <Image
-              src='/TELEFONOOFICINAICON.svg'
-              alt='Icono 1'
-              width={16}
-              height={16}
-              className='w-4 h-4'
-            />
-            <div className='block md:flex'>
-              <p className='text-white text-[12px] lg:text-[12px]'>
-                (305) 960-7677
-              </p>
-            </div>
-              </a>
+              href='tel:+13059607677'
+              className='flex gap-2 '
+              onClick={(e) => {
+                if (
+                  !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                    navigator.userAgent,
+                  )
+                ) {
+                  e.preventDefault();
+                  alert("Please call from your phone to (305) 960-7677");
+                }
+              }}
+            >
+              <Image
+                src='/TELEFONOOFICINAICON.svg'
+                alt='Icono 1'
+                width={16}
+                height={16}
+                className='w-4 h-4'
+              />
+              <div className='block md:flex'>
+                <p className='text-white text-[12px] lg:text-[12px]'>
+                  (305) 960-7677
+                </p>
+              </div>
+            </a>
           </div>
 
           <div className='flex items-center gap-2 mb-1 '>
             <a
-  href='mailto:info@vinylartgraphic.com'
-  onClick={(e) => {
-    // Detectar si es desktop
-    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-      e.preventDefault();
-      // Opción A: Mostrar mensaje
-      alert('Email: info@vinylartgraphic.com\n\nYour default email client will open.');
-      // Opción B: Abrir en Gmail web (opcional)
-      window.open('https://mail.google.com/mail/?view=cm&fs=1&to=info@vinylartgraphic.com', '_blank');
-    }
-  }}
-  className='flex gap-2'
->
-            <Image
-              src='/EMAILICON.svg'
-              alt='Icono 2'
-              width={16}
-              height={16}
-              className='w-4 h-4'
-            />
-            <p className='text-white text-[12px] lg:text-[12px]'>
-              info@vinylartgraphic.com
-            </p>
+              href='mailto:info@vinylartgraphic.com'
+              onClick={(e) => {
+                // Detectar si es desktop
+                if (
+                  !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+                    navigator.userAgent,
+                  )
+                ) {
+                  e.preventDefault();
+                  // Opción A: Mostrar mensaje
+                  alert(
+                    "Email: info@vinylartgraphic.com\n\nYour default email client will open.",
+                  );
+                  // Opción B: Abrir en Gmail web (opcional)
+                  window.open(
+                    "https://mail.google.com/mail/?view=cm&fs=1&to=info@vinylartgraphic.com",
+                    "_blank",
+                  );
+                }
+              }}
+              className='flex gap-2'
+            >
+              <Image
+                src='/EMAILICON.svg'
+                alt='Icono 2'
+                width={16}
+                height={16}
+                className='w-4 h-4'
+              />
+              <p className='text-white text-[12px] lg:text-[12px]'>
+                info@vinylartgraphic.com
+              </p>
             </a>
           </div>
 
           <div className='flex items-center gap-2 mb-1'>
             <a
-            href='https://www.google.com/maps/search/?api=1&query=4910+E+4th+Ave+Hialeah+FL+33013'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='flex gap-2'
-          >
-            <Image
-              src='/UBICACIoNICON.svg'
-              alt='Icono 3'
-              width={16}
-              height={16}
-              className='w-4 h-4'
-            />
-            <p className='text-white text-[12px] lg:text-[12px]'>
-              4910 E 4th Ave, Hialeah, FL 33013
-            </p>
+              href='https://www.google.com/maps/place/Vinyl+Art+Design+Corp/@25.8675328,-80.2750593,21z/data=!4m6!3m5!1s0x88d9b195cf442977:0xfba8091ff6c9cb3f!8m2!3d25.8674314!4d-80.2748911!16s%2Fg%2F11qpv808hx?entry=ttu&g_ep=EgoyMDI2MDMwMS4xIKXMDSoASAFQAw%3D%3D'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='flex gap-2'
+            >
+              <Image
+                src='/UBICACIoNICON.svg'
+                alt='Icono 3'
+                width={16}
+                height={16}
+                className='w-4 h-4'
+              />
+              <p className='text-white text-[12px] lg:text-[12px]'>
+                4910 E 4th Ave, Hialeah, FL 33013
+              </p>
             </a>
           </div>
 

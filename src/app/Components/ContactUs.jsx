@@ -323,7 +323,7 @@ const ContactUs = () => {
           </a>
           {/* Dirección - Abre en Google Maps */}
           <a
-            href='https://www.google.com/maps/search/?api=1&query=4910+E+4th+Ave+Hialeah+FL+33013'
+            href='https://www.google.com/maps/place/Vinyl+Art+Design+Corp/@25.8675328,-80.2750593,21z/data=!4m6!3m5!1s0x88d9b195cf442977:0xfba8091ff6c9cb3f!8m2!3d25.8674314!4d-80.2748911!16s%2Fg%2F11qpv808hx?entry=ttu&g_ep=EgoyMDI2MDMwMS4xIKXMDSoASAFQAw%3D%3D'
             target='_blank'
             rel='noopener noreferrer'
             className='flex items-center justify-center gap-2 p-2 md:col-span-2'
